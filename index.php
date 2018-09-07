@@ -5,7 +5,7 @@ require 'data.php';
 require 'functions.php';
 
 if(isset($_POST['login']) && isset($_POST['password'])){
-    if(verify_password($_POST['login'],$_POST['password'] ,$data)){
+    if(verify_user($_POST['login'],$_POST['password'] ,$data)){
         $_SESSION['Name'] = $_POST['login'];
         $_SESSION['Password'] = $_POST['password'];
     }
