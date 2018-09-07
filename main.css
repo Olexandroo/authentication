@@ -4,36 +4,56 @@ body{
 }
 .form{
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    flex-direction: column;
     width: 340px;
     margin-top: 200px;
     position: relative;
 }
-.login, .pass{
+.login, .pass,.input{
     border: 0px;
     margin-top:14px; 
     font-size: 15px;
     padding: 26px 20px 10px;
 }
 .submit-btn{
+    margin-left: 20px;
     margin-top: 20px;
     width: 300px;
     border-radius: 20px;
     border: 0px; 
-    background-color: lightcoral;
+    background-color: lightsalmon;
     font-size: 18px;
     padding: 14px 50px;
-
+    color: white;
 }
 h1{
     position: absolute;
     text-align: center;
     height: 100px;
-    color: rgb(245, 102, 102);
-    margin-top: 50px; 
+    color: lightsalmon;
+    margin-top: 100px; 
 }
 .change{
     position: absolute;
     height: 20px;
+}
+form > p{
+    text-align: center;
+    height: 100px;
+    color: lightsalmon;
+    font-size:20px;
+    margin-top: 10px;
+}
+.output{
+    margin-top: 20px;
+    text-align: center;
+    color: lightsalmon;
+    font-size:18px;
+}
+hr{
+    margin-top:30px;
+    margin-bottom: 10px; 
+    width: 340px;
+    border: 2px solid lightsalmon
 }

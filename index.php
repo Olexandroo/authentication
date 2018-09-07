@@ -11,7 +11,7 @@ if(isset($_POST['login']) && isset($_POST['password'])){
     }
 }
 
-if(isset($_SESSION['Name']) && $_SESSION['Password']){
+if(isset($_SESSION['Name']) && isset($_SESSION['Password'])){
     header('Location: cart.php');
 }
 ?>
@@ -28,10 +28,10 @@ if(isset($_SESSION['Name']) && $_SESSION['Password']){
 </head>
 <body>
     <h1 id="header">Authentication</h1>
-    <button class="change" onclick="changeTheme()">Change theme</button>
+    <!-- <button class="change" onclick="changeTheme()">Change theme</button> -->
     <form  method="POST" action="" class="form">
-    <input type="text" name="login" placeholder="login" required="required" class="login">
-    <input type="password" name="password" placeholder="password" required="required" class="pass">
+    <input type="text" name="login" placeholder="olexandro" required="required" class="login">
+    <input type="text" name="password" placeholder="olexandro" required="required" class="pass">
     <button type="submit" name="sign in" class="submit-btn" >Sign in</button>
     </form>
 
