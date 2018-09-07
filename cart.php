@@ -18,13 +18,13 @@ session_start();
     <form action="" method="POST" class="form">
     <select name="" id="">
         <option value="">Выберите товары</option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
-        <option value=""></option>
+        <option value="">Футболка</option>
+        <option value="">Джинсы</option>
+        <option value="">Кроссовки</option>
+        <option value="">Пиджак</option>
+        <option value="">Рубашка</option>
     </select>
-    <button type="submit" name="login" class="submit-btn">Calculate</button>
+    <button type="submit" name="login" class="submit-btn">Посчитать</button>
     </form>
 </body>
 </html>
