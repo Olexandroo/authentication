@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 require 'data.php';
 require 'functions.php';
 $problems = [];
@@ -11,7 +10,6 @@ if(!empty($_POST)){
             $_SESSION['Password'] = $_POST['password'];
         }
     }
-
     if(isset($_SESSION['Name']) && isset($_SESSION['Password'])){
         header('Location: cart.php');
     }
