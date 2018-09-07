@@ -1,4 +1,5 @@
 <?php
+session_start();
 require 'data.php';
 
 function verify_user($username,$userpassword,$array){
@@ -20,31 +21,31 @@ function cartRecalc() {
 	}
 	$_SESSION['cart']['sum']=$sum;
 }    
-function check(){
-    $errors = [];
-    $products = getProducts();
-    if(!empty($_POST)){
-	
-        if(isset($_POST['goods'])&& $_POST['goods']!=0){
-            $product = $_POST['goods'];
-        }else{
-            $errors['goods']='Выберите товар';
-        }
-        if(isset($_POST['count'])&&$_POST['count']!=0){
-            $count = $_POST['count'];
-        }else{
-            $errors['count']= 'Ввведите количество товара';
-        }
-        
-        if(empty($errors)){
-            $index = $product;
-            $product = $products[$index];
-            if(isset($_SESSION['cart']['items'][$index])){
-                $count +=  $_SESSION['cart']['items'][$index]['count'];
-            }
-            $_SESSION['cart']['items'][$index] = ['name'=> $product["name"],'count'=>$count];
-        }
-    }
-}
 
+// function check(){
+    
+//     $products = getProducts();
+//     if(!empty($_POST)){
+	
+//         if(isset($_POST['goods'])&& $_POST['goods']!=0){
+//             $product = $_POST['goods'];
+//         }else{
+//             $errors['goods'] ='Выберите товар';
+//         }
+//         if(isset($_POST['count'])&&$_POST['count']!=0){
+//             $count = $_POST['count'];
+//         }else{
+//             $errors['count'] = 'Введите количество товара';
+//         }
+        
+//         if(empty($errors)){
+//             $index = $product;
+//             $product = $products[$index];
+//             if(isset($_SESSION['cart']['items'][$index])){
+//                 $count +=  $_SESSION['cart']['items'][$index]['count'];
+//             }
+//         $_SESSION['cart']['items'][$index] = ['name'=> $product["name"],'count'=>$count];
+//         }
+//     }
+//}
 ?>
