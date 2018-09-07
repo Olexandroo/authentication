@@ -57,3 +57,10 @@ hr{
     width: 340px;
     border: 2px solid lightsalmon
 }
+.trouble{
+    text-align: center;
+    height: 20px;
+    color: tomato;
+    font-size:20px;
+    margin-bottom: 0px;
+}
