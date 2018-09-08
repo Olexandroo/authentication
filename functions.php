@@ -47,7 +47,6 @@ if(!empty($_POST)){
         }
     $_SESSION['cart']['items'][$index] = ['name'=> $product["name"],'count'=>$count];
     }
-    return $errors;
     }
 
 //
