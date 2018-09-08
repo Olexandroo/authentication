@@ -2,6 +2,21 @@
 session_start();
 require 'data.php';
 require 'functions.php';
+$problems = [];
+if(!empty($_POST)){
+    if(isset($_POST['login']) && isset($_POST['password'])){
+        if(verify_user($_POST['login'],$_POST['password'] ,$data)){
+            $_SESSION['Name'] = $_POST['login'];
+            $_SESSION['Password'] = $_POST['password'];
+        }
+    }
+    if(isset($_SESSION['Name']) && isset($_SESSION['Password'])){
+        header('Location: cart.php');
+    }
+    else {
+        $problems['trouble'] = 'Пароль или логин введен неверно';
+    }
+}
 
 ?>
 
@@ -27,6 +42,5 @@ require 'functions.php';
     <input type="text" name="password" placeholder="olexandro" required="required" class="pass">
     <button type="submit" name="sign in" class="submit-btn" >Войти</button>
     </form>
-
 </body>
 </html>
